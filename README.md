@@ -6,7 +6,15 @@
 
 ## 📌 Overview
 
-This repository contains a complete computational analysis of the astrophysical S-factor and thermonuclear reaction rate for the **⁴⁵Sc(α,n)⁴⁸V** reaction. The work uses experimental cross-section data from the EXFOR database and implements Python-based numerical methods to compute S-factors and reaction rates.
+This repository contains a complete computational analysis of the astrophysical S-factor and thermonuclear reaction rates for **five (α,n) reactions**:
+
+- **⁴⁵Sc(α,n)⁴⁸V** (Q = -2.241 MeV)
+- **⁴⁸Ti(α,n)⁵¹Cr** (Q = -2.687 MeV)
+- **⁵¹V(α,n)⁵⁴Mn** (Q = -2.294 MeV)
+- **⁵⁰Cr(α,n)⁵³Fe** (Q = -4.961 MeV)
+- **⁵⁵Mn(α,n)⁵⁸Co** (Q = -3.512 MeV)
+
+The work uses experimental cross-section data from the EXFOR database and implements Python-based numerical methods to compute S-factors and reaction rates.
 
 ### Why This Matters
 
