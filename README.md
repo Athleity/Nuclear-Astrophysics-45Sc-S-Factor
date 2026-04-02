@@ -1,4 +1,4 @@
-# Nuclear Astrophysics: ⁴⁵Sc(α,n)⁴⁸V S-Factor Analysis
+# Nuclear Astrophysics: S-Factor Analysis
 
 [![IAPT NSSP-2025](https://img.shields.io/badge/IAPT-NSSP--2025-blue)](https://github.com/Athleity/Nuclear-Astrophysics-45Sc-S-Factor)
 [![Jupyter Notebook](https://img.shields.io/badge/Jupyter-Notebook-orange)](https://jupyter.org/)
