@@ -54,50 +54,45 @@ $$\frac{\Delta S(E)}{S(E)} = \frac{\Delta\sigma(E)}{\sigma(E)}$$
 ---
 
 ## 📁 Repository Structure
-
-```
 Nuclear-Astrophysics-45Sc-S-Factor/
 │
 ├── data/
-│   ├── reaction_rates_45Sc.xlsx           
-│   └── numerical_integration_results.xlsx 
+│ ├── reaction_rates_45Sc.xlsx
+│ └── numerical_integration_results.xlsx
 │
 ├── manuscript/
-│   ├── manuscript.pdf                      
-│   ├── presentation.pdf                    
-│   └── certificate.pdf                     
+│ ├── manuscript.pdf
+│ ├── presentation.pdf
+│ └── certificate.pdf
 │
 ├── notebooks/
-│   ├── 01_sfactor_error_propagation.ipynb
-│   ├── 02_reaction_rate_integration.ipynb
-│   ├── 03_gamow_factor_calculation.ipynb
-│   ├── 04_sommerfeld_parameter.ipynb
-│   ├── 05_alpha_n_reaction_analysis.ipynb
-│   ├── 06_45Sc_sfactor_comparison.ipynb
-│   ├── 07_gauss_legendre_integration.ipynb
-│   ├── 08_reaction_rate_from_cross_section.ipynb
-│   ├── 09_log_sfactor_analysis.ipynb
-│   ├── 10_sfactor_kev_units.ipynb
-│   ├── 11_physical_constants.ipynb
-│   ├── 12_reaction_rate_plotting.ipynb
-│   ├── 13_energy_cross_section_analysis.ipynb
-│   ├── 14_plot_cross_section.ipynb
-│   ├── 15_plot_cross_section_with_errors.ipynb
-│   ├── 16_plot_sfactor_formula.ipynb
-│   ├── 17_plot_sfactor_polynomial.ipynb
-│   ├── 18_plot_sfactor_with_errors.ipynb
-│   └── 19_plot_reaction_rates_comparison.ipynb
+│ ├── 01_sfactor_error_propagation.ipynb
+│ ├── 02_reaction_rate_integration.ipynb
+│ ├── 03_gamow_factor_calculation.ipynb
+│ ├── 04_sommerfeld_parameter.ipynb
+│ ├── 05_alpha_n_reaction_analysis.ipynb
+│ ├── 06_45Sc_sfactor_comparison.ipynb
+│ ├── 07_gauss_legendre_integration.ipynb
+│ ├── 08_reaction_rate_from_cross_section.ipynb
+│ ├── 09_log_sfactor_analysis.ipynb
+│ ├── 10_sfactor_kev_units.ipynb
+│ ├── 11_physical_constants.ipynb
+│ ├── 12_reaction_rate_plotting.ipynb
+│ ├── 13_energy_cross_section_analysis.ipynb
+│ ├── 14_plot_cross_section.ipynb
+│ ├── 15_plot_cross_section_with_errors.ipynb
+│ ├── 16_plot_sfactor_formula.ipynb
+│ ├── 17_plot_sfactor_polynomial.ipynb
+│ ├── 18_plot_sfactor_with_errors.ipynb
+│ └── 19_plot_reaction_rates_comparison.ipynb
 │
 ├── graphs/
-│   ├── 01_cross_section_vs_energy/
-│   ├── 02_reaction_rates_vs_temperature/
-│   ├── 03_sfactor_formula_vs_energy/
-│   ├── 04_sfactor_comparison/
-│   └── 05_sfactor_polynomial_vs_energy/
-│
-├── README.md
-└── requirements.txt
-```
+│ ├── 01_cross_section_vs_energy/
+│ ├── 02_reaction_rates_vs_temperature/
+│ ├── 03_sfactor_formula_vs_energy/
+│ ├── 04_sfactor_comparison/
+│ └── 05_sfactor_polynomial_vs_energy/
+
 
 ---
 
@@ -132,94 +127,66 @@ $$\langle \sigma v \rangle = \frac{3.7313 \times 10^7}{\sqrt{\mu}} T_9^{-1.5} \i
 
 ```bash
 pip install numpy scipy matplotlib pandas openpyxl jupyter
-```
-
-**requirements.txt:**
-```
 numpy==1.24.3
 scipy==1.10.1
 matplotlib==3.7.1
 pandas==2.0.3
 openpyxl==3.1.2
 jupyter==1.0.0
-```
 
----
+📈 Key Results
+S-factor shows smooth energy dependence suitable for extrapolation to stellar energies
 
-## 📈 Key Results
+Reaction rates increase exponentially in Gamow window (T₉ = 0.1-1 GK)
 
-- S-factor shows smooth energy dependence suitable for extrapolation to stellar energies
-- Reaction rates increase exponentially in Gamow window (T₉ = 0.1-1 GK)
-- Numerical integration methods (Trapezoidal & Gauss-Legendre) show excellent agreement
-- Error propagation implemented using ΔS/S = Δσ/σ
+Numerical integration methods (Trapezoidal & Gauss-Legendre) show excellent agreement
 
----
+Error propagation implemented using ΔS/S = Δσ/σ
 
-## 📝 Notebooks List
-
-| # | Notebook | Description |
-|---|----------|-------------|
-| 01 | sfactor_error_propagation.ipynb | Propagates cross-section errors to S-factor |
-| 02 | reaction_rate_integration.ipynb | Main reaction rate calculation via integration |
-| 03 | gamow_factor_calculation.ipynb | Computes Gamow factor and tunneling probability |
-| 04 | sommerfeld_parameter.ipynb | Calculates η for given energies |
-| 05 | alpha_n_reaction_analysis.ipynb | General (α,n) reaction analysis framework |
-| 06 | 45Sc_sfactor_comparison.ipynb | Compares calculated vs. literature S-factors |
-| 07 | gauss_legendre_integration.ipynb | Implements Gauss-Legendre quadrature |
-| 08 | reaction_rate_from_cross_section.ipynb | Rate calculation from σ(E) data |
-| 09 | log_sfactor_analysis.ipynb | Analyzes ln(S) vs. E for polynomial fitting |
-| 10 | sfactor_kev_units.ipynb | Converts S-factor to keV·barn units |
-| 11 | physical_constants.ipynb | Reference for constants used |
-| 12 | reaction_rate_plotting.ipynb | Plotting utilities for rates |
-| 13 | energy_cross_section_analysis.ipynb | E-σ(E) product analysis |
-| 14 | plot_cross_section.ipynb | Plots σ(E) vs energy |
-| 15 | plot_cross_section_with_errors.ipynb | Plots σ(E) with error bars |
-| 16 | plot_sfactor_formula.ipynb | Plots S(E) from direct calculation |
-| 17 | plot_sfactor_polynomial.ipynb | Plots S(E) from polynomial fit |
-| 18 | plot_sfactor_with_errors.ipynb | Plots S(E) with propagated errors |
-| 19 | plot_reaction_rates_comparison.ipynb | Compares both rate calculation methods |
-
----
-
-## 🚀 How to Use
-
-```bash
-git clone https://github.com/Athleity/Nuclear-Astrophysics-45Sc-S-Factor.git
-cd Nuclear-Astrophysics-45Sc-S-Factor
-jupyter notebook notebooks/
-```
-
----
-
-## 👨‍🔬 Author
-
-**Priyansh Bhavsar**
+📝 Notebooks List
+#	Notebook	Description
+01	sfactor_error_propagation.ipynb	Propagates cross-section errors to S-factor
+02	reaction_rate_integration.ipynb	Main reaction rate calculation via integration
+03	gamow_factor_calculation.ipynb	Computes Gamow factor and tunneling probability
+04	sommerfeld_parameter.ipynb	Calculates η for given energies
+05	alpha_n_reaction_analysis.ipynb	General (α,n) reaction analysis framework
+06	45Sc_sfactor_comparison.ipynb	Compares calculated vs. literature S-factors
+07	gauss_legendre_integration.ipynb	Implements Gauss-Legendre quadrature
+08	reaction_rate_from_cross_section.ipynb	Rate calculation from σ(E) data
+09	log_sfactor_analysis.ipynb	Analyzes ln(S) vs. E for polynomial fitting
+10	sfactor_kev_units.ipynb	Converts S-factor to keV·barn units
+11	physical_constants.ipynb	Reference for constants used
+12	reaction_rate_plotting.ipynb	Plotting utilities for rates
+13	energy_cross_section_analysis.ipynb	E-σ(E) product analysis
+14	plot_cross_section.ipynb	Plots σ(E) vs energy
+15	plot_cross_section_with_errors.ipynb	Plots σ(E) with error bars
+16	plot_sfactor_formula.ipynb	Plots S(E) from direct calculation
+17	plot_sfactor_polynomial.ipynb	Plots S(E) from polynomial fit
+18	plot_sfactor_with_errors.ipynb	Plots S(E) with propagated errors
+19	plot_reaction_rates_comparison.ipynb	Compares both rate calculation methods
+👨‍🔬 Author
+Priyansh Bhavsar
 B.S. Physics, Indian Institute of Technology Jodhpur
-- GitHub: [@Athleity](https://github.com/Athleity)
 
-## 🙏 Supervisor
+GitHub: @Athleity
 
-**Dr. N. J. Upadhyay**
+🙏 Supervisor
+Dr. N. J. Upadhyay
 Assistant Professor (III), Amity University Maharashtra
 
----
+📚 Presentation
+This work was presented at the 12th IAPT National Students' Symposium on Physics (NSSP-2025)
 
-## 📚 Presentation
-
-This work was presented at the **12th IAPT National Students' Symposium on Physics (NSSP-2025)**
-
-| Detail | Information |
-|--------|-------------|
-| Dates | October 10-12, 2025 |
-| Venue | Department of Physics, Panjab University, Chandigarh |
-| Type | Oral/Poster Presentation |
-
----
----
-## 📖 Citation
-
-**Bhavsar, P., & Upadhyay, N. J.** (2025). *A Computational Analysis of Experimental Nuclear Reaction Data*. In *12th IAPT National Students' Symposium on Physics (NSSP-2025)*. Panjab University, Chandigarh.
+Detail	Information
+Dates	October 10-12, 2025
+Venue	Department of Physics, Panjab University, Chandigarh
+Type	Oral/Poster Presentation
+📖 Citation
+Bhavsar, P., & Upadhyay, N. J. (2025). A Computational Analysis of Experimental Nuclear Reaction Data. In *12th IAPT National Students' Symposium on Physics (NSSP-2025)*. Panjab University, Chandigarh.
 
 ⭐ If you find this work useful, please consider starring the repository!
 
 Made with ❤️ for Nuclear Astrophysics Research
+│
+├── README.md
+└── requirements.txt
