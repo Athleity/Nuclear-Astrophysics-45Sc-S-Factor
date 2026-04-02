@@ -210,6 +210,7 @@ This work was presented at the **12th IAPT National Students' Symposium on Physi
 ---
 ## 📖 Citation
 
+
 ```bibtex
 @inproceedings{bhavsar2025astrophysical,
   title={A Computational Analysis of Experimental Nuclear Reaction Data},
@@ -221,3 +222,4 @@ This work was presented at the **12th IAPT National Students' Symposium on Physi
 ⭐ If you find this work useful, please consider starring the repository!
 
 Made with ❤️ for Nuclear Astrophysics Research
+
